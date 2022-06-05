@@ -62,12 +62,12 @@ function checkGuess () {
     }
 
     if (guessString.length != 5) {
-        toastr.error("Not enough letters!")
+        toastr.error("Not enough letters, try again :)")
         return
     }
 
     if (!WORDS.includes(guessString)) {
-        toastr.error("Word not in list!")
+        toastr.error("Word not in list, try again :)")
         return
     }
 
@@ -107,7 +107,7 @@ function checkGuess () {
     }
 
     if (guessString === rightGuessString) {
-        toastr.success("You guessed right! Game over!")
+        toastr.success("Purrrfect! Oreo and Pizzelle a-paw-lad!!! ^_^")
         guessesRemaining = 0
         return
     } else {
@@ -116,7 +116,7 @@ function checkGuess () {
         nextLetter = 0;
 
         if (guessesRemaining === 0) {
-            toastr.error("You've run out of guesses! Game over!")
+            toastr.error("You've run out of guesses, but Oreo and Pizzelle still love you!! <3")
             toastr.info(`The right word was: "${rightGuessString}"`)
         }
     }
